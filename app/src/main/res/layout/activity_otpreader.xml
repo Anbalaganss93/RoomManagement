@@ -5,9 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.roommanagement.MainActivity">
+    tools:context="com.roommanagement.OTPReaderActivity">
 
     <RelativeLayout
+        android:id="@+id/login_toolbar_header"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/app_toolbar_color">
@@ -24,32 +25,33 @@
             android:src="@drawable/ic_left_arrow" />
 
         <com.roommanagement.CustomeFonts.MyTextViewBold
+            android:id="@+id/login_toolbar_title"
             style="@android:style/TextAppearance.DeviceDefault.Medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="Dashboard"
+            android:text="OTP"
             android:textColor="@color/white" />
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/viewConverter"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/orange">
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/app_margin_left"
+        android:layout_marginStart="@dimen/app_margin_right">
 
-        <com.roommanagement.CustomeFonts.MyTextView
-            style="@android:style/TextAppearance.DeviceDefault.Small"
-            android:layout_width="wrap_content"
+        <com.hololo.library.otpview.OTPView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="Back to home"
-            android:textColor="@color/app_toolbar_color" />
+            android:layout_gravity="center"
+            android:gravity="center"
+            app:count="7"
+            android:id="@+id/readotp"
+            app:hintColor="@android:color/holo_blue_bright"
+            app:inputType="number"
+            app:otpHint="*"
+            app:otpText="123"
+            app:textColor="@color/colorPrimary" />
     </RelativeLayout>
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/monthly_recyclerview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
 </LinearLayout>

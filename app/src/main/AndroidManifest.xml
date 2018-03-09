@@ -3,6 +3,9 @@
     package="com.roommanagement">
 
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
@@ -15,20 +18,36 @@
         <activity android:name=".SplashScreen" />
         <activity
             android:name=".LoginActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".RegisterScreenActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".MonthlyDetailActivity" />
-        <activity android:name=".NotesListActivity">
+        <activity
+            android:name=".MonthlyDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NotesListActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CreateNotes" />
-        <activity android:name=".NotesDetailViewActivity"></activity>
+        <activity
+            android:name=".CreateNotes"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NotesDetailViewActivity"
+            android:screenOrientation="portrait" />
+
+        <receiver android:name=".SmsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".OTPReaderActivity"></activity>
     </application>
 
 </manifest>
