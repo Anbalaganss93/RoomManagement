@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.roommanagement.CreateNotes">
+
+    <RelativeLayout
+        android:id="@+id/login_toolbar_header"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/app_toolbar_color">
+
+        <ImageView
+            android:id="@+id/backbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_backleft"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_create" />
+
+        <com.roommanagement.CustomeFonts.MyTextViewBold
+            android:id="@+id/login_toolbar_title"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Notes"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/editnotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dimen_toolbarright"
+            android:layout_marginRight="@dimen/dimen_toolbarright"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_create" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="@dimen/dimen_10">
+
+                <com.roommanagement.CustomeFonts.MyTextView
+                    android:id="@+id/title"
+                    style="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginStart="@dimen/dimen_10"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="Title"
+                    android:minHeight="60dp"
+                    android:textColor="@color/app_toolbar_color"
+                    android:textColorHint="@color/hintcolor" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_10"
+                android:layout_marginEnd="@dimen/dimen_10"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="@dimen/dimens_5"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="@dimen/dimen_10">
+
+                <com.roommanagement.CustomeFonts.MyEditText
+                    android:id="@+id/content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginStart="@dimen/dimen_10"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="Content"
+                    android:minHeight="200dp"
+                    android:paddingTop="@dimen/dimen_10"
+                    android:textColor="@color/app_toolbar_color"
+                    android:textColorHint="@color/hintcolor" />
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.roommanagement.RegisterScreenActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/app_toolbar_color">
+
+        <TextView
+            android:id="@+id/register_toolbar_title"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Register"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/app_margin_left"
+            android:layout_marginRight="@dimen/app_margin_right"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/usertype_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/edittext_background_drawable"
+                android:hint="@string/select_usertype"
+                android:popupBackground="@color/app_button_color"
+                android:textColor="@color/white"
+                android:textColorHint="@color/hintcolor" />
+
+            <com.pchmn.materialchips.ChipsInput
+                android:id="@+id/chips_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:chip_backgroundColor="@color/app_toolbar_color"
+                app:chip_deletable="false"
+                app:chip_deleteIconColor="@color/hintcolor"
+                app:chip_detailed_backgroundColor="@color/app_toolbar_color"
+                app:chip_detailed_deleteIconColor="@color/white"
+                app:chip_detailed_textColor="@color/white"
+                app:chip_hasAvatarIcon="true"
+                app:chip_labelColor="@color/white"
+                app:filterable_list_backgroundColor="@color/white"
+                app:filterable_list_textColor="@color/black"
+                app:hint="Enter a name"
+                app:hintColor="@color/hintcolor"
+                app:maxRows="3"
+                app:textColor="@color/app_toolbar_color" />
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/edittext_background_drawable"
+                android:hint="@string/user_name"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:inputType="textPersonName"
+                android:textColor="@color/white"
+                android:textColorHint="@color/hintcolor" />
+
+            <EditText
+                android:id="@+id/phonenumber"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:background="@drawable/edittext_background_drawable"
+                android:hint="Enter phonenumber"
+                android:inputType="number"
+                android:maxLength="10"
+                android:textColor="@color/white"
+                android:textColorHint="@color/hintcolor" />
+
+            <Button
+                android:id="@+id/bt_register"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:background="@drawable/button_background_drawable"
+                android:text="@string/register"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+        </LinearLayout>
+</LinearLayout>
+

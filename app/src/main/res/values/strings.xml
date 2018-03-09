@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">RoomManagement</string>
+    <string name="register">Register</string>
+    <string name="select_usertype">Select usertype</string>
+    <string name="phonenumber">Enter phonenumber</string>
+    <string name="user_name">Enter name</string>
+    <string-array name="usertype_array">
+        <item>Room member</item>
+        <item>Room admin</item>
+    </string-array>
+</resources>

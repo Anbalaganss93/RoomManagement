@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MediumFonts">
+        <attr name="MediumFont" format="string">"fonts/Muli-Regular.ttf"</attr>
+        <attr name="LightFont" format="string">"fonts/Muli-Light.ttf"</attr>
+        <attr name="BoldFont" format="string">"fonts/Muli-Bold.ttf"</attr>
+    </declare-styleable>
+</resources>
